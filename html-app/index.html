@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello App</title>
-</head>
-<body>
-  <h1>Response from Server:</h1>
-  <p id="output">Loading...</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins + Kops</title>
 
-  <script>
-    fetch('http://localhost:3000/')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('output').innerText = data.message;
-      })
-      .catch(error => {
-        console.error(error);
-        document.getElementById('output').innerText = 'Error fetching data';
-      });
-  </script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f172a,#1e3a8a);
+            color:white;
+            text-align:center;
+        }
+
+        .container{
+            padding:40px;
+        }
+
+        h1{
+            font-size:55px;
+            margin-bottom:20px;
+        }
+
+        h2{
+            font-size:36px;
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        p{
+            font-size:20px;
+            color:#d1d5db;
+        }
+
+        .rocket{
+            font-size:90px;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="rocket">🚀</div>
+
+        <h1>Jenkins + Kops</h1>
+
+        <h2>CI/CD Pipeline Successfully Deployed</h2>
+
+        <p>Your application is live on Kubernetes using Jenkins and Kops.</p>
+    </div>
+
 </body>
 </html>
